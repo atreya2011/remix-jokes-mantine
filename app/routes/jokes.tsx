@@ -33,6 +33,9 @@ export default function JokesRoute() {
           ))}
         </ul>
       </Paper>
+      <Link to="new" className="button">
+        Add your own
+      </Link>
       <Outlet />
     </Container>
   );
