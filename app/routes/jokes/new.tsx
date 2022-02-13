@@ -1,24 +1,22 @@
+import { Button, Container, Paper, Text, Textarea, TextInput } from "@mantine/core";
+
 export default function NewJokeRoute() {
   return (
-    <div>
-      <p>Add your own hilarious joke</p>
+    <Container>
+      <Paper padding={"xs"}>
+        <Text>Add your own hilarious joke</Text>
+      </Paper>
       <form method="post">
-        <div>
-          <label>
-            Name: <input type="text" name="name" />
-          </label>
-        </div>
-        <div>
-          <label>
-            Content: <textarea name="content" />
-          </label>
-        </div>
-        <div>
-          <button type="submit" className="button">
-            Add
-          </button>
-        </div>
+        <Paper padding={"xs"}>
+          <TextInput placeholder="Name" label="Name" required />
+        </Paper>
+        <Paper padding={"xs"}>
+          <Textarea placeholder="Your comment" label="Your comment" required />
+        </Paper>
+        <Paper padding={"xs"}>
+          <Button>Submit</Button>
+        </Paper>
       </form>
-    </div>
+    </Container>
   );
 }
